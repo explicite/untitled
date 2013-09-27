@@ -1,10 +1,10 @@
-import ComplexImplicit._
+import complex.ComplexImplicit._
 
 /**
  * @author Jan Paw
- *         Date: 9/18/13
+ *         Date: 27.09.13
  */
-object Main {
+package object complex {
   def main(args: Array[String]) {
     val c = new Complex(1.0, 1.0)
     val d: Complex = 1.0

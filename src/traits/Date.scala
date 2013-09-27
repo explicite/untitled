@@ -15,7 +15,7 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
 
   def <(that: Any): Boolean = {
     if (!that.isInstanceOf[Date])
-      error("cannot compare " + that + " and a Date")
+      sys.error("cannot compare " + that + " and a Date")
     val o = that.asInstanceOf[Date]
     (year < o.year) ||
       (year == o.year && (month < o.month ||

@@ -1,3 +1,5 @@
+package date
+
 import java.util.{Date, Locale}
 import java.text.DateFormat._
 

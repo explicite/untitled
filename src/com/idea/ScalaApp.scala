@@ -13,7 +13,7 @@ object ScalaApp {
     })
     print(
       """
-        |Hellom this is a sample Scala application.
+        |Hello this is a sample Scala application.
         |
         |Find more info at http://www.scala-lang.org/
       """.stripMargin)

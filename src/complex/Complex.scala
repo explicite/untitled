@@ -1,3 +1,4 @@
+package complex;
 /**
  * @author Jan Paw
  *         Date: 9/17/13
@@ -17,5 +18,3 @@ class Complex(real: Double, imaginary: Double) {
   override def toString() =
     "" + re + (if (im < 0) "" else "+") + im + "i"
 }
-
-
