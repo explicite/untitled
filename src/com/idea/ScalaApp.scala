@@ -14,7 +14,7 @@ object ScalaApp {
     print(
       """
         |Hello this is a sample Scala application.
-        |
+        |                                            '
         |Find more info at http://www.scala-lang.org/
       """.stripMargin)
   }
