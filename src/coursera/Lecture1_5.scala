@@ -14,16 +14,18 @@ object Lecture1_5 {
       if (isGoodEnough(guess)) guess
       else sqrtIter(improve(guess))
 
-    def isGoodEnough(guess: Double) =
-      abs(guess * guess - x) / x < 0.001
-
     def improve(guess: Double) =
       (guess + x / guess) / 2
+
+    def isGoodEnough(guess: Double) =
+      abs(guess * guess - x) / x < 0.001
 
     sqrtIter(1.0)
   }
 
-  /*println(sqrt(2))
-  println(sqrt(1e-6))
-  println(sqrt(1e60))*/
+  def main(args: Array[String]) {
+    println(sqrt(2))
+    println(sqrt(1e-6))
+    println(sqrt(1e60))
+  }
 }
