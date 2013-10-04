@@ -1,9 +1,9 @@
-package book
+package book.concurrent
 
 /**
  * @author Jan Paw
  *         Date: 03.10.13
  */
 trait ThreadStrategy {
-  def execute[A](func: Function0[A]): Function0[A]
+  def execute[A](func: () => A): () => A
 }

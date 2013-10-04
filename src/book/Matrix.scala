@@ -22,7 +22,7 @@ class Matrix(private val repr: Array[Array[Double]]) {
   lazy val rowRank = repr.size
   lazy val colRank = if (rowRank > 0) repr(0).size else 0
 
-  override def toString: String = "Matrix" + repr.foldLeft() {
+  override def toString: String = "Matrix" + repr.foldLeft("") {
     (msg, row) => msg + row.mkString("\n|", " |", "|")
   }
 }
