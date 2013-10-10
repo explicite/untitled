@@ -11,9 +11,12 @@ object Lecture2_2 {
 
   def fact(n: Int) = product(x => x)(1, n)
 
-  def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int): Int = {
+  /*def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int): Int = {
     if (a > b) zero else combine(f(a), mapReduce(f, combine, zero)(a + 1, b))
-  }
+  }*/
+
+  def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int): Int =
+    if (a > b) zero else (a to b).par.map(f).reduce(combine)
 
   def main(args: Array[String]) {
     println(fact(5))
