@@ -11,5 +11,7 @@ package object lecture2_5 {
     val z = new Rational(3, 2)
 
     println(x - y - z)
+    println(x * y * z)
+    println(x / y / z)
   }
 }

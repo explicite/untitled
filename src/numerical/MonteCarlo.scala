@@ -15,7 +15,8 @@ object MonteCarlo {
   }
 
   def simulate(times: Int): Double = {
-    val inside = Iterator.tabulate(times)(_ => (nextThrow, nextThrow)) count insideCircle
+    val inside = (0 to times).toList.par.count(_ => insideCircle(nextThrow, nextThrow))
+    //val inside = Iterator.tabulate(times)(_ => (nextThrow, nextThrow)) count insideCircle
     inside.toDouble / times.toDouble * 4.0
   }
 }
