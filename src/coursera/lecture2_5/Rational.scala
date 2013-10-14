@@ -8,6 +8,13 @@ object Rational {
   implicit def intToRational(x: Int) = new Rational(x, 1)
 }
 
+/**
+ * @author Jan Paw
+ *         Date: 10/9/13
+ *
+ * @param x
+ * @param y
+ */
 class Rational(x: Int, y: Int) {
   require(y != 0, "denominator must be nonzero")
 
