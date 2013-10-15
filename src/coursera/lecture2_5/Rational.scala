@@ -33,26 +33,26 @@ class Rational(x: Int, y: Int) {
       denom * that.denom
     )
 
-  def -(that: Rational) = this + that.neg
+  def - (that: Rational) = this + -that
 
-  def ==(that: Rational) = numer == that.numer && denom == that.denom
+  def == (that: Rational) = numer == that.numer && denom == that.denom
 
-  def !=(that: Rational) = !(this == that)
+  def != (that: Rational) = !(this == that)
 
-  def <(that: Rational) = numer * that.denom < that.numer * denom
+  def < (that: Rational) = numer * that.denom < that.numer * denom
 
-  def <=(that: Rational) = this < that || this == that
+  def <= (that: Rational) = this < that || this == that
 
-  def >(that: Rational) = !(this <= that) && this != that
+  def > (that: Rational) = !(this <= that) && this != that
 
-  def >=(that: Rational) = this > that || this == that
+  def >= (that: Rational) = this > that || this == that
 
-  def *(that: Rational) = new Rational(
+  def * (that: Rational) = new Rational(
     numer * that.numer,
     denom * that.denom
   )
 
-  def /(that: Rational) = this * that.inverse
+  def / (that: Rational) = this * that.inverse
 
   def max(that: Rational) = if (this < that) that else this
 
@@ -60,7 +60,7 @@ class Rational(x: Int, y: Int) {
     denom, numer
   )
 
-  def neg: Rational = new Rational(-numer, denom)
+  def unary_- : Rational = new Rational(-numer, denom)
 
   override def toString = s"${numer}/${denom}"
 }

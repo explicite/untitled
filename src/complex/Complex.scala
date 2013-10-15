@@ -14,16 +14,16 @@ class Complex(real: Double, imaginary: Double) {
 
   def im = imaginary
 
-  def +(that: Complex) = new Complex(this.re + that.re, this.im + that.im)
+  def + (that: Complex) = new Complex(this.re + that.re, this.im + that.im)
 
-  def -(that: Complex) = new Complex(this.re - that.re, this.im - that.im)
+  def - (that: Complex) = new Complex(this.re - that.re, this.im - that.im)
 
-  def *(that: Complex) = new Complex(
+  def * (that: Complex) = new Complex(
     (this.re * that.re) - (this.im * that.im),
     (this.im * that.re) - (this.re * that.im)
   )
 
-  def /(that: Complex) = new Complex(
+  def / (that: Complex) = new Complex(
     ((this.re * that.re) + (this.im * that.im)) / ((that.re * that.re) + (that.im * that.im)),
     ((this.im * that.re) - (this.re * that.im)) / ((that.re * that.re) + (that.im * that.im))
   )
@@ -48,7 +48,7 @@ class Complex(real: Double, imaginary: Double) {
     new Complex(re, -im)
   }
 
-  def ==(that: Complex) = this.re == that.re && this.im == that.im
+  def == (that: Complex) = this.re == that.re && this.im == that.im
 
   override def toString =
     s"$re${
