@@ -1,4 +1,5 @@
 package complex
+import scala.language.implicitConversions
 
 /**
  * @author Jan Paw

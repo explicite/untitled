@@ -1,4 +1,5 @@
 package coursera.lecture2_5
+import scala.language.implicitConversions
 
 /**
  * @author Jan Paw
