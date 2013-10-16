@@ -4,13 +4,12 @@ package coursera.lecture3_1
  * @author Jan Paw
  *         Date: 10/15/13
  */
-object Empty extends Set {
-  def incl(x: Nothing): Set = new NonEmpty(x, Empty, Empty)
+class Empty[T <: Ordered[T]] extends Set[T] {
+  def incl(x: T): Set[T] = new Tree(x, new Empty, new Empty)
 
-  def contains(x: Nothing): Boolean = false
+  def contains(x: T): Boolean = false
 
-  def union(other: Set[Nothing]): Set[Nothing] = other
+  def union(other: Set[T]): Set[T] = other
 
   override def toString: String = "."
-
 }
