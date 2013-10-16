@@ -41,7 +41,7 @@ class RationalTest extends FunSuite {
   }
 
   test("Rational multiplication") {
-    assert(x * y == new Rational(2,2))
+    assert(x * y == new Rational(2, 2))
   }
 
   test("Rational max") {
@@ -49,7 +49,7 @@ class RationalTest extends FunSuite {
   }
 
   test("Rational neg") {
-    assert(x.neg == new Rational(-1, 2))
+    assert(-x == new Rational(-1, 2))
   }
 
   test("Rational inverse") {
