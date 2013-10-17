@@ -4,7 +4,7 @@ package coursera.lecture3_2
  * @author Jan Paw
  *         Date: 10/16/13
  */
-trait List[+T] {
+trait List[T] {
   def isEmpty: Boolean
 
   def head: T

@@ -8,7 +8,7 @@ package coursera.lecture3_1
  * @author Jan Paw
  *         Date: 10/15/13
  */
-class Tree[+T <: Ordered[T]](elem: T, left: Set[T], right: Set[T]) extends Set[T] {
+class Tree[T <: Ordered[T]](elem: T, left: Set[T], right: Set[T]) extends Set[T] {
   def incl(x: T): Set[T] =
     if (x < elem) new Tree(elem, left incl x, right)
     else if (x > elem) new Tree(elem, left, right incl x)
@@ -23,4 +23,6 @@ class Tree[+T <: Ordered[T]](elem: T, left: Set[T], right: Set[T]) extends Set[T
     ((left union right) union other) incl elem
 
   override def toString: String = s"{$left$elem${right}}"
+
+  def apply(): Tree[T]#S = ???
 }
