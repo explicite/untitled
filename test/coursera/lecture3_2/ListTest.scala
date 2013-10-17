@@ -7,7 +7,7 @@ import org.scalatest.FunSuite
  *         Date: 10/16/13
  */
 class ListTest extends FunSuite {
-  val list: List[Int] = new Cons(100, new Cons(-1, new Cons(5, Nil)))
+  val list: List[Int] = new Cons(100, new Cons(-1, new Cons(5, new Nil)))
 
   test("Get List index") {
     assert(list(2) == 5)

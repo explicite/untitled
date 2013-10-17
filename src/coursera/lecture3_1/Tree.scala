@@ -23,6 +23,5 @@ class Tree[T <: Ordered[T]](elem: T, left: Set[T], right: Set[T]) extends Set[T]
     ((left union right) union other) incl elem
 
   override def toString: String = s"{$left$elem${right}}"
-
-  def apply(): Tree[T]#S = ???
 }
+
