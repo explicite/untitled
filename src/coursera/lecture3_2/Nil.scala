@@ -4,7 +4,7 @@ package coursera.lecture3_2
  * @author Jan Paw
  *         Date: 10/16/13
  */
-class Nil[T] extends List[T] {
+object Nil extends List[Nothing] {
   def isEmpty: Boolean = true
 
   def head: Nothing = throw new NoSuchElementException("Nil.head")
