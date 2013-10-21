@@ -1,6 +1,7 @@
 package coursera.lecture4_2
 
 /**
+ * @param n
  * @author Jan Paw
  *         Date: 10/17/13
  */

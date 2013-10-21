@@ -4,7 +4,7 @@ package coursera.lecture3_1
  * @author Jan Paw
  *         Date: 10/15/13
  */
-trait Set[T <: Ordered[T]] {
+abstract class Set[T](implicit ord: Ordering[T]) {
 
   def incl(x: T): Set[T]
 
