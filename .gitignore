@@ -10,3 +10,8 @@ out
 # intellij #
 *.iml
 .idea
+.idea_modules
+
+# sbt #
+lib/
+target/
