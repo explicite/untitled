@@ -15,3 +15,5 @@ out
 # sbt #
 lib/
 target/
+project/target
+project/project
