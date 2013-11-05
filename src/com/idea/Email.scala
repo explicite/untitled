@@ -8,7 +8,7 @@ import java.util.regex.Matcher
  * @author Jan Paw
  *         Date: 9/25/13
  */
-case class Email(val address: String) {
+case class Email(address: String) {
   private val matcher: Matcher = """([\w\.]+)@([\w\.]+)""".r.pattern.matcher(address)
   if (!matcher.matches()) {
     throw new IllegalArgumentException("Address is invalid")

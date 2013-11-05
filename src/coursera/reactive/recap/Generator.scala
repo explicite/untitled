@@ -24,7 +24,7 @@ trait Generator[+T] {
 
   val booleans = for (x <- integers) yield x > 0
 
-  def pairs[T, U](t: Generator[T], u: Generator[U]) = t flatMap {
+  def pairs[P, U](t: Generator[P], u: Generator[U]) = t flatMap {
     x => u map {
       y => (x, y)
     }

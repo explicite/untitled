@@ -7,8 +7,8 @@ import org.scalatest.FunSuite
  *         Date: 10/14/13
  */
 class ComplexTest extends FunSuite {
-  val c1 = new Complex(1, 2);
-  val c2 = new Complex(2, 1);
+  val c1 = new Complex(1, 2)
+  val c2 = new Complex(2, 1)
 
   test("Equal complex number") {
     assert(c1 == new Complex(1, 2))

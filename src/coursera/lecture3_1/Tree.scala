@@ -24,6 +24,6 @@ class Tree[T](elem: T, left: Set[T], right: Set[T])(implicit ord: Ordering[T]) e
   def union(other: Set[T]): Set[T] =
     ((left union right) union other) incl elem
 
-  override def toString: String = s"{$left$elem${right}}"
+  override def toString: String = s"{$left$elem$right}"
 }
 

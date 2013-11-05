@@ -11,7 +11,7 @@ class Date(y: Int, m: Int, d: Int) extends Ord {
 
   def day = d
 
-  override def toString(): String = year + "-" + month + "-" + day
+  override def toString: String = year + "-" + month + "-" + day
 
   def <(that: Any): Boolean = {
     if (!that.isInstanceOf[Date])

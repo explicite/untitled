@@ -17,13 +17,13 @@ object Karacuba {
 
     val b = x >> n
     val a = x - (b << n)
-    val d = y >> n;
+    val d = y >> n
     val c = y - (d << n)
 
     val ac = multiple(a, c)
     val bd = multiple(b, d)
     val abcd = multiple(a + b, c + d)
 
-    return ac + ((abcd - ac - bd) << n) + (bd << (2 * n))
+    ac + ((abcd - ac - bd) << n) + (bd << (2 * n))
   }
 }

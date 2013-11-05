@@ -1,5 +1,7 @@
 package coursera
 
+import scala.language.postfixOps
+
 /**
  * @author Jan Paw
  *         Date: 10/30/13

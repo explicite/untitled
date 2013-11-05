@@ -62,5 +62,5 @@ class Rational(x: Int, y: Int) {
 
   def unary_- : Rational = new Rational(-numer, denom)
 
-  override def toString = s"${numer}/${denom}"
+  override def toString = s"$numer/$denom"
 }

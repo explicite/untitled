@@ -16,7 +16,7 @@ class Matrix(private val repr: Array[Array[Double]]) {
       (buffer, currentRow) =>
         buffer.append(currentRow(idx))
         buffer
-    } toArray
+    }.toArray
   }
 
   lazy val rowRank = repr.size

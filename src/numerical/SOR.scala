@@ -13,8 +13,7 @@ class SOR(m: Array[Array[Double]], v: Array[Double], o: Double) {
 
   def omega = o
 
-  def solve = {
-  }
+  def solve = ???
 
   def subtractVectors(first: Array[Double], second: Array[Double]) {
     val result = new Array[Double](first.length)
