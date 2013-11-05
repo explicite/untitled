@@ -20,5 +20,5 @@ trait List[+T] {
 }
 
 object List {
-  def apply[T](): List[T] = Nil;
+  def apply[T](): List[T] = Nil
 }

@@ -5,7 +5,7 @@ package coursera.reactive.recap
  *         Date: 11/4/13
  */
 abstract class JSON {
- /* def show(json: JSON): String = json match {
+  def show(json: JSON): String = json match {
     case JSeq(elems) =>
       "[" + (elems map show mkString ", ") + "]"
     case JObj(bindings) =>
@@ -17,5 +17,5 @@ abstract class JSON {
     case JStr(str)  => '\"' + str + '\"'
     case JBool(b)   => b.toString
     case JNull      => "null"
-  }*/
+  }
 }
