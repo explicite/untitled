@@ -9,7 +9,44 @@ import scala.language.reflectiveCalls
  */
 object Opt {
 
-  def lagrange(f: Double => Double, a: Double, b: Double, ε: Double, γ: Double, N: Double): (Double, Double) = {
+  def goldNumber(f: Double => Double, lim: (Double, Double), ε: Double, N: Int): Double = {
+
+    val a: Double = lim._1
+    val b: Double = lim._2
+
+    var i: Int = 0
+    val ϕ: Double = 0.6180339887
+    var ai: Double = a
+    var bi: Double = b
+    def c: Double = bi - (ϕ * (bi - ai))
+    def d: Double = ai + (ϕ * (bi - ai))
+    var ci: Double = c
+    var di: Double = d
+
+    repeat {
+      if (f(ci) < f(di)) {
+        bi = di
+        di = ci
+        ci = c
+      } else {
+        ai = ci
+        ci = di
+        di = d
+      }
+      i = i + 1
+      if (i > N)
+        throw new Error("cannot optimize in N steps")
+
+    } until (bi - ai < ε)
+
+    (ai + bi) / 2
+
+  }
+
+  def lagrange(f: Double => Double, lim: (Double, Double), ε: Double, γ: Double, N: Double): (Double, Double) = {
+
+    val a: Double = lim._1
+    val b: Double = lim._2
 
     var ai = a
     var bi = b
@@ -51,7 +88,11 @@ object Opt {
 
   }
 
-  def fibonacci(f: Double => Double, a: Double, b: Double, ε: Double): (Double, Double) = {
+  def fibonacci(f: Double => Double, lim: (Double, Double), ε: Double): (Double, Double) = {
+
+    val a: Double = lim._1
+    val b: Double = lim._2
+
     val k = φ((b - a) / ε)
     def β(k: Int): Double = φk(k - 1).toDouble / φk(k).toDouble
     var ai: Double = a
