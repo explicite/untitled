@@ -39,7 +39,7 @@ abstract class Simulation {
     case first :: rest =>
       agenda = rest
       curtime = first.time
-      first.action
+      first.action()
       loop()
     case Nil =>
   }
