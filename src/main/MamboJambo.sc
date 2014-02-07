@@ -21,8 +21,16 @@ x = 4
 otherContext(add, 5)
 
 //Recursion
-val fact: (Int, Int) => Int = (x: Int, total: Int) => if(x <= 1) total else fact(x-1, x * total)
-val factorial = (x:Int) => fact(x,1)
+val fact: (Int, Int) => Int = (x: Int, total: Int) => if (x <= 1) total else fact(x - 1, x * total)
+val factorial = (x: Int) => fact(x, 1)
 factorial(0)
 factorial(4)
+
+//Qsort
+def qsort[T <% Ordered[T]](list: List[T]): List[T] = list match {
+  case Nil => Nil
+  case x :: xs =>
+    val (before, after) = xs partition (_ < x)
+    qsort(before) ++ (x :: qsort(after))
+}
 
