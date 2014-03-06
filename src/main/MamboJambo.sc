@@ -10,16 +10,13 @@ l map increment
 
 //Side effect and immutability
 val tree = increment(2)
-
 //Closure
 var x = 3
 val add = (y: Int) => x + y
 val otherContext = (f: (Int) => Int, x: Int) => f(x) + x
-
 otherContext(add, 5)
 x = 4
 otherContext(add, 5)
-
 //Recursion
 val fact: (Int, Int) => Int = (x: Int, total: Int) => if (x <= 1) total else fact(x - 1, x * total)
 val factorial = (x: Int) => fact(x, 1)
