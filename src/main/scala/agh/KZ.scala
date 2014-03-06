@@ -47,10 +47,10 @@ object KZ {
     for (i <- start until end)
       s += x(i)
 
-    s / x.length
+    s / (end - start)
   }
 
-  //for fun only
+  //for fun only, should be moved 
   def diff(xs: List[Double]): List[Double] = xs match {
     case x :: Nil => Nil
     case x :: z => (z.head - x) :: diff(z)

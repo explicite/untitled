@@ -30,7 +30,7 @@ class KZTest extends FunSuite with Matchers {
 
     println(x)
     println(tx)
-    println(KZ(tx, 3, 2))
+    println(KZ(tx, 3, 1))
   }
 
 }
